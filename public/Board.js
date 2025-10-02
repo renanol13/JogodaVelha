@@ -28,7 +28,7 @@ const setPositionCell = (data) => {
 const restartGame = () => {
   cell.map((cell) => {
     cell.classList.remove("cellActive")
-    cell.forEach((cell) => (cell.innerText = ""));
+    cell.innerText = ""
   })
 
   socket.emit("restartGame", codeRoom);
@@ -38,7 +38,6 @@ const restartGame = () => {
 //sockets
 
 socket.on("timeMove", ({ time, userTurn }) => {
-  console.log(userTurn);
   
   
   setTime.innerText = String(time).padStart(2, "0")

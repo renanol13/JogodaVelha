@@ -8,13 +8,13 @@ const connectSocket = () => {
 //Reinicia e limpa o tempo
   const resetTimer = (room) => {
   clearInterval(room.interval);
-  room.time = 10;
+  room.time = 20;
   room.interval = null;
   };
   
   //Controla o tempo e o qual usuario vai ser mostrado no front
   const setTimeMove = (room, user) => {
-    room.time = 10;
+    room.time = 20;
 
     if (room.interval) {
       clearInterval(room.interval);
@@ -25,7 +25,7 @@ const connectSocket = () => {
 
       if (room.time <= 0) {
         clearInterval(room.interval);
-        room.time = 10;
+        room.time = 20;
         room.interval = null;
         room.turn = user.symbol === "X" ? "O" : "X";
 
