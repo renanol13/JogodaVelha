@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="Board.css" />
+    <title>TIC-TAC-TOE online</title>
+
+    <!-- Biblioteca de efeitos -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="infoPlayer">
+        <p class="name" id="playerOne">Renan</p>
+      </div>
+      <div id="boxScore">
+        <span class="score" id="scorePlayerOne">0</span>
+        <span>X</span>
+        <span class="score" id="scorePlayerTwo">0</span>
+      </div>
+      <div class="infoPlayer">
+        <p class="name" id="playerTwo">Fulano</p>
+      </div>
+      <div id="time">00:<span id="setTime">30</span></div>
+    </header>
+    <main>
+      <div id="board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="Board.js"></script>
+  </body>
+</html>
